@@ -1,0 +1,11 @@
+Forked my classmate's repository on github.
+
+git clone https://github.com/berkayersoy/IronBaudouin
+ls IronBaudouin
+touch berkay.txt
+(Manually added text to my text file.)
+git add .
+git commit -m "created my own file and added it"
+git push origin classmate
+
+The pull request and merging has been done on github.
