@@ -1,6 +1,7 @@
 Forked my classmate's repository on github.
 
 git clone https://github.com/berkayersoy/IronBaudouin
+cd ~/Desktop/IronBaudouin
 ls IronBaudouin
 touch berkay.txt
 (Manually added text to my text file.)
