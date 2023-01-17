@@ -1,6 +1,7 @@
 Forked my classmate's repository on github.
 
 git clone https://github.com/berkayersoy/IronBaudouin
+cd ~/Desktop/IronBaudouin
 ls IronBaudouin
 touch berkay.txt
 (Manually added text to my text file.)
@@ -9,3 +10,7 @@ git commit -m "created my own file and added it"
 git push origin classmate
 
 The pull request and merging has been done on github.
+
+
+Link to my repository in the pair programming exercise: https://github.com/berkayersoy/IronBerkay
+Link to my classmate's repository: https://github.com/berkayersoy/IronBaudouin
