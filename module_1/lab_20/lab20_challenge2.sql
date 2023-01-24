@@ -1,0 +1,39 @@
+CREATE DATABASE lab20;
+USE lab20;
+
+CREATE TABLE IF NOT EXISTS Cars (
+	VIN VARCHAR(255) PRIMARY KEY NOT NULL,
+    Manufacturer VARCHAR(255),
+    Model VARCHAR(255),
+    Year INT,
+    Color VARCHAR(255)
+    );
+
+CREATE TABLE Customers (
+	CustomerID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(255) NOT NULL,
+    Phone VARCHAR(255) NOT NULL,
+    Email VARCHAR(255),
+    Adress VARCHAR(255),
+    City VARCHAR(255),
+    State VARCHAR(255),
+    Country VARCHAR(255),
+    Postal INT
+);
+
+CREATE TABLE Salespersons (
+	StaffID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(255),
+    Store VARCHAR(255)
+);
+
+CREATE TABLE Invoices (
+	InvoiceNumber INT UNIQUE,
+    Date DATE,
+    VIN VARCHAR(255),
+    CustomerID INT,
+    StaffID INT,
+	FOREIGN KEY (VIN) REFERENCES Cars(VIN),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (StaffID) REFERENCES Salespersons(StaffID)
+);
