@@ -40,8 +40,28 @@ ORDER BY total_declared_monthly_revenue DESC;
 SELECT DISTINCT(review_score) FROM order_reviews;
 
 # 8. In the order_reviews table, create a new column with a description that corresponds to each number category for each review score from 1 - 5, then find the review score and category occurring most frequently in the table.
-# Question unclear.
-SELECT * FROM order_reviews;
+ALTER TABLE order_reviews ADD description_review VARCHAR(255);
+
+UPDATE order_reviews
+SET description_review = "very good"
+WHERE review_score = 5;
+
+UPDATE order_reviews
+SET description_review = "good"
+WHERE review_score = 4;
+
+UPDATE order_reviews
+SET description_review = "average"
+WHERE review_score = 3;
+
+UPDATE order_reviews
+SET description_review = "bad"
+WHERE review_score = 2;
+
+UPDATE order_reviews
+SET description_review = "very bad"
+WHERE review_score = 1;
+
 
 # 9. From the order_reviews table, find the review value occurring most frequently and how many times it occurs.
 # Review_score 5 occurs the most. 57420 times.
