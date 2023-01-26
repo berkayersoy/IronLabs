@@ -70,9 +70,11 @@ while game:
     #Printing the hint for the user.
     print(guess,' '.join(response))
 
+
   if turn == 13:
     print("You couldn't find it in 12 turns. What a pity! Codebreaker you lost!!!")
 
+  #If-else loop to rerun the code or to stop it.
   if input('Do you want to play again? ').lower()== 'yes':
     game = True;
   else:
