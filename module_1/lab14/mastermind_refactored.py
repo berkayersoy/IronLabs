@@ -26,8 +26,7 @@ while game:
 
 
   #We use this turn variable to count turns and as a counter to break the while loop.
-  turn = 1
-  while turn <= 12:
+  for turn in range(12):
     codebreaker = input('Codebreaker, make a guess:')
     guess = codebreaker.lower().split()
     response = []
@@ -57,21 +56,17 @@ while game:
       else:
         response.append('✖️')
 
-
-    #We increment turn by 1 every loop to count the turns.
-    turn += 1
-
     #Checking if guess is matching the enigma.
     if guess==enigma:
       print('Congratulations 🎉🎉🎉🎉🎉')
-      print("You have guessed it in",turn-1,"turns.")
+      print("You have guessed it in",turn,"turns.")
       break
     
     #Printing the hint for the user.
     print(guess,' '.join(response))
 
 
-  if turn == 13:
+  if turn == 11:
     print("You couldn't find it in 12 turns. What a pity! Codebreaker you lost!!!")
 
   #If-else loop to rerun the code or to stop it.
